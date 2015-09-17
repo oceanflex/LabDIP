@@ -10,11 +10,13 @@ package dip.lab2.student.solution1;
  * @author zsummers
  */
 public class Startup {
-    public static enum ServiceQuality {
-           GOOD, FAIR, POOR
-    };
-    ServiceQuality sq;
+//    public static enum ServiceQuality {
+//           GOOD, FAIR, POOR
+//    };
+//    ServiceQuality sq = ServiceQuality.FAIR;
     public static void main(String[] args) {
+        WorkerTipCalculator bags = new BaggageTipCalculator(WorkerTipCalculator.ServiceQuality.FAIR, 4);
+        WorkerTipCalculator wait = new WaiterTipCalculator(WorkerTipCalculator.ServiceQuality.GOOD, 45.32);
         
     }
 }

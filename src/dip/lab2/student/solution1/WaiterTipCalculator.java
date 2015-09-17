@@ -9,7 +9,7 @@ package dip.lab2.student.solution1;
  *
  * @author zsummers
  */
-public class WiaterTipCalculator implements WorkerTipCalculator {
+public class WaiterTipCalculator implements WorkerTipCalculator {
     private ServiceQuality sq;
 
     public void setGoodRate(double goodRate) {
@@ -32,7 +32,7 @@ public class WiaterTipCalculator implements WorkerTipCalculator {
 
     private double bill;
     
-    public WiaterTipCalculator(ServiceQuality q, double billAmt) {
+    public WaiterTipCalculator(ServiceQuality q, double billAmt) {
         this.setServiceQuality(q);
         this.setBill(billAmt);
     }
