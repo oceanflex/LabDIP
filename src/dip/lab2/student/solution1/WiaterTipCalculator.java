@@ -11,7 +11,19 @@ package dip.lab2.student.solution1;
  */
 public class WiaterTipCalculator implements WorkerTipCalculator {
     private ServiceQuality sq;
+    private final double MIN_BILL = 0.00;
+    private final String BILL_ENTRY_ERR =
+            "Error: bill must be greater than or equal to " + MIN_BILL;
+    private double goodRate = 0.20;
+    private double fairRate = 0.15;
+    private double poorRate = 0.10;
+
+    private double bill;
     
+    public WiaterTipCalculator(ServiceQuality q, double billAmt) {
+        this.setServiceQuality(q);
+        this.setBill(billAmt);
+    }
     
     @Override
     public void setServiceQuality(ServiceQuality sq){
@@ -24,6 +36,26 @@ public class WiaterTipCalculator implements WorkerTipCalculator {
 
     @Override
     public double getTip() {
-        return 0;
+        double tip = 0.00; // always initialize local variables
+
+        switch(sq) {
+            case GOOD:
+                tip = bill * goodRate;
+                break;
+            case FAIR:
+                tip = bill * fairRate;
+                break;
+            case POOR:
+                tip = bill * poorRate;
+                break;
+        }
+
+        return tip;
+    }
+    public final void setBill(double billAmt) {
+        if(billAmt < MIN_BILL) {
+            throw new IllegalArgumentException(BILL_ENTRY_ERR);
+        }
+        bill = billAmt;
     }
 }
