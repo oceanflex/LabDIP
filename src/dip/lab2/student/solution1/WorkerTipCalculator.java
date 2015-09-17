@@ -15,6 +15,6 @@ public interface WorkerTipCalculator {
         GOOD, FAIR, POOR
     }
     public void setServiceQuality(ServiceQuality sq);
-    public double getServiceQuality();
+    public ServiceQuality getServiceQuality();
     
 }
