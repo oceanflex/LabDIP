@@ -12,7 +12,15 @@ package dip.lab2.student.solution1;
 public class TipCalculatorService {
     private WorkerTipCalculator worker;
     
+    public void setWorker(WorkerTipCalculator worker){
+        this.worker = worker;
+    }
+    
     public double getTip(){
+        return worker.getTip();
+    }
+    
+    public double getTip(WorkerTipCalculator worker){
         return worker.getTip();
     }
 }

@@ -17,7 +17,10 @@ public class Startup {
     public static void main(String[] args) {
         WorkerTipCalculator bags = new BaggageTipCalculator(WorkerTipCalculator.ServiceQuality.FAIR, 4);
         WorkerTipCalculator wait = new WaiterTipCalculator(WorkerTipCalculator.ServiceQuality.GOOD, 45.32);
-        System.out.println(bags.getTip());
-        System.out.println(wait.getTip());
+        
+        TipCalculatorService tipService = new TipCalculatorService();
+        
+        System.out.println(tipService.getTip(bags));
+        System.out.println(tipService.getTip(wait));
     }
 }
