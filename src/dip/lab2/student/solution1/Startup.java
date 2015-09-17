@@ -18,9 +18,9 @@ public class Startup {
         WorkerTipCalculator bags = new BaggageTipCalculator(WorkerTipCalculator.ServiceQuality.FAIR, 4);
         WorkerTipCalculator wait = new WaiterTipCalculator(WorkerTipCalculator.ServiceQuality.GOOD, 45.32);
         
-        TipCalculatorService tipService = new TipCalculatorService();
+        TipCalculatorService tipService = new TipCalculatorService(bags);
         
-        System.out.println(tipService.getTip(bags));
+        System.out.println(tipService.getTip());
         System.out.println(tipService.getTip(wait));
     }
 }

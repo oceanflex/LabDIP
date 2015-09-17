@@ -12,6 +12,14 @@ package dip.lab2.student.solution1;
 public class TipCalculatorService {
     private WorkerTipCalculator worker;
     
+    /**
+     *
+     * @param worker
+     */
+    public TipCalculatorService(WorkerTipCalculator worker){
+        this.worker = worker;
+    }
+    
     public void setWorker(WorkerTipCalculator worker){
         this.worker = worker;
     }
