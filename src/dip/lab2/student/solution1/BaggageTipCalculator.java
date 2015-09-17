@@ -38,6 +38,22 @@ public class BaggageTipCalculator implements WorkerTipCalculator {
     public ServiceQuality getServiceQuality() {
         return this.sq;
     }
+
+    public void setMaxBill(double maxBill) {
+        this.maxBill = maxBill;
+    }
+
+    public void setGoodRate(double goodRate) {
+        this.goodRate = goodRate;
+    }
+
+    public void setFairRate(double fairRate) {
+        this.fairRate = fairRate;
+    }
+
+    public void setPoorRate(double poorRate) {
+        this.poorRate = poorRate;
+    }
     
     @Override
     public double getTip() {

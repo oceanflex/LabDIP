@@ -11,6 +11,18 @@ package dip.lab2.student.solution1;
  */
 public class WiaterTipCalculator implements WorkerTipCalculator {
     private ServiceQuality sq;
+
+    public void setGoodRate(double goodRate) {
+        this.goodRate = goodRate;
+    }
+
+    public void setFairRate(double fairRate) {
+        this.fairRate = fairRate;
+    }
+
+    public void setPoorRate(double poorRate) {
+        this.poorRate = poorRate;
+    }
     private final double MIN_BILL = 0.00;
     private final String BILL_ENTRY_ERR =
             "Error: bill must be greater than or equal to " + MIN_BILL;
