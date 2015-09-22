@@ -12,14 +12,14 @@ package dip.lab3.student.solution1;
 public class Startup {
     public static void main(String[] args) {
         MessageReader welcome = new WelcomeStaticMessage();
-        MessageOutput console = new ConsoleMessageOutput();
-        MessageReader keyboard = new KeyboardMessageReader();
+        //MessageOutput console = new ConsoleMessageOutput();
+        //MessageReader keyboard = new KeyboardMessageReader();
         MessageReader hello = new HelloStaticMessage();
         MessageOutput gui = new JOptionPaneMessageOutput();
-        MessagingService message = new MessagingService(welcome, console);
-        message.setReader(keyboard);
-        message.setOutput(gui);
-        message.serveMessage();
+        MessagingService message = new MessagingService(welcome, gui);
+        //message.setReader(keyboard);
+        //message.setOutput(gui);
+        //message.serveMessage();
         message.sendReaderUpdate(hello);
     }
 }
