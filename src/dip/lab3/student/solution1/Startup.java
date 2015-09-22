@@ -11,8 +11,15 @@ package dip.lab3.student.solution1;
  */
 public class Startup {
     public static void main(String[] args) {
-        MessageReader reader = new StaticMessageReader();
-        MessageOutput writer = new ConsoleMessageOutput();
-        MessagingService message = new MessagingService(reader, writer);
+        MessageReader stable = new StaticMessageReader();
+        MessageOutput console = new ConsoleMessageOutput();
+        MessageReader keyboard = new KeyboardMessageReader();
+        MessageOutput gui = new JOptionPaneMessageOutput();
+        MessagingService message = new MessagingService(stable, console);
+        message.setReader(keyboard);
+        message.readMessage();
+        message.sendMessage();
+        message.setOutput(gui);
+        message.sendMessage();
     }
 }
