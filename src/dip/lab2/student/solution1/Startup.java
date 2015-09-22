@@ -15,7 +15,7 @@ public class Startup {
 //    };
 //    ServiceQuality sq = ServiceQuality.FAIR;
     public static void main(String[] args) {
-        WorkerTipCalculator bags = new BaggageTipCalculator(ServiceQuality.FAIR, 4);
+        WorkerTipCalculator bags = new BagHandlerTipCalculator(ServiceQuality.FAIR, 4);
         WorkerTipCalculator wait = new WaiterTipCalculator(ServiceQuality.GOOD, 45.32);
         
         TipCalculatorService tipService = new TipCalculatorService(bags);
