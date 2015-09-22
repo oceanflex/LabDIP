@@ -11,12 +11,12 @@ package dip.lab3.student.solution1;
  */
 public class Startup {
     public static void main(String[] args) {
-        MessageReader stable = new StaticMessageReader();
+        MessageReader welcome = new WelcomeStaticMessage();
         MessageOutput console = new ConsoleMessageOutput();
         MessageReader keyboard = new KeyboardMessageReader();
         MessageReader hello = new HelloStaticMessage();
         MessageOutput gui = new JOptionPaneMessageOutput();
-        MessagingService message = new MessagingService(stable, console);
+        MessagingService message = new MessagingService(welcome, console);
         message.setReader(keyboard);
         message.setOutput(gui);
         message.serveMessage();
