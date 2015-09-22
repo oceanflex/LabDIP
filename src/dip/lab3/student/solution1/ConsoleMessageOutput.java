@@ -12,7 +12,7 @@ package dip.lab3.student.solution1;
 public class ConsoleMessageOutput implements MessageOutput{
 
     @Override
-    public void writeMessage(String write) {
+    public void sendMessage(String write) {
         System.out.println(write);
     }
     

@@ -19,7 +19,7 @@ public class MessagingService {
         this.reader = reader;
         this.writer = writer;
         setMessage(reader.readMessage()); 
-        writer.writeMessage(getMessageString());
+        writer.sendMessage(getMessageString());
     }
     
     private void setMessage(String message){

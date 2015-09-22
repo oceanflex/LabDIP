@@ -10,5 +10,5 @@ package dip.lab3.student.solution1;
  * @author Zachary
  */
 public interface MessageOutput {
-    public abstract void writeMessage(String write);
+    public abstract void sendMessage(String write);
 }

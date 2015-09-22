@@ -13,7 +13,7 @@ import javax.swing.JOptionPane;
 public class JOptionPaneMessageOutput implements MessageOutput{
 
     @Override
-    public void writeMessage(String write) {
+    public void sendMessage(String write) {
         JOptionPane.showMessageDialog(null,write);
     }
     
