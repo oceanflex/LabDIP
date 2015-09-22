@@ -11,12 +11,22 @@ package dip.lab3.student.solution1;
  */
 public class MessagingService {
     private String message;
+    private MessageReader reader;
+    private MessageWriter writer;
     
-    public void setMessage(String message){
+    
+    public MessagingService(MessageReader reader, MessageWriter writer){
+        this.reader = reader;
+        this.writer = writer;
+        setMessage(reader.readMessage()); 
+        writer.writeMessage(getMessageString());
+    }
+    
+    private void setMessage(String message){
         this.message = message;
     }
     
-    public String getMessageString(){
+    private String getMessageString(){
         return this.message;
     }
 }
