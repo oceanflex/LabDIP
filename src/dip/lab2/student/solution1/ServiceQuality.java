@@ -9,9 +9,6 @@ package dip.lab2.student.solution1;
  *
  * @author zsummers
  */
-public interface WorkerTipCalculator {
-    public double getTip();
-    public void setServiceQuality(ServiceQuality sq);
-    public ServiceQuality getServiceQuality();
-    
+public enum ServiceQuality {
+    GOOD, FAIR, POOR
 }
