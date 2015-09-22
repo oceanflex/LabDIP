@@ -10,5 +10,13 @@ package dip.lab3.student.solution1;
  * @author Zachary
  */
 public class MessagingService {
+    private String message;
     
+    public void setMessage(String message){
+        this.message = message;
+    }
+    
+    public String getMessageString(){
+        return this.message;
+    }
 }
