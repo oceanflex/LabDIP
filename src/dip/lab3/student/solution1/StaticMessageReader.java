@@ -21,11 +21,11 @@ public class StaticMessageReader implements MessageReader{
     
     
     @Override
-    public String readMessage() {
+    public final String readMessage() {
         return message;
     }
     
-    public void setMessage(String message){
+    public final void setMessage(String message){
         this.message = message;
     
     }
