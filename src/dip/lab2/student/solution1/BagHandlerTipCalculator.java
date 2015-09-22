@@ -9,7 +9,7 @@ package dip.lab2.student.solution1;
  *
  * @author zsummers
  */
-public class BaggageTipCalculator implements WorkerTipCalculator {
+public class BagHandlerTipCalculator implements WorkerTipCalculator {
     private ServiceQuality sq;
     private final double MIN_BILL = 0.00;
     private double maxBill = 100.00;
@@ -23,7 +23,7 @@ public class BaggageTipCalculator implements WorkerTipCalculator {
     private double baseTipPerBag = 0.75;
     private int bagCount;
     
-    public BaggageTipCalculator(ServiceQuality q, int bags) {
+    public BagHandlerTipCalculator(ServiceQuality q, int bags) {
         this.setServiceQuality(q); // perform validation
         this.setBagCount(bags);
 

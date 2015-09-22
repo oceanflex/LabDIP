@@ -9,11 +9,6 @@ package dip.lab3.student.solution1;
  *
  * @author Zachary
  */
-public class ConsoleMessageWriter implements MessageWriter{
-
-    @Override
-    public void writeMessage(String write) {
-        System.out.println(write);
-    }
-    
+public interface MessageOutput {
+    public abstract void sendMessage(String write);
 }

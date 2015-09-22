@@ -12,14 +12,44 @@ package dip.lab3.student.solution1;
 public class MessagingService {
     private String message;
     private MessageReader reader;
-    private MessageWriter writer;
+    private MessageOutput sender;
     
     
-    public MessagingService(MessageReader reader, MessageWriter writer){
+    public MessagingService(MessageReader reader, MessageOutput sender){
+        setReader(reader);
+        setOutput(sender);
+        serveMessage();
+    }
+    
+    public final void serveMessage(){
+        readMessage();
+        sendMessage();
+    }
+    
+    public final void sendOutputUpdate(MessageOutput sender){
+        setOutput(sender);
+        sendMessage();
+    }
+    
+    public final void sendReaderUpdate(MessageReader reader){
+        setReader(reader);
+        serveMessage();
+    }
+    
+    public final void readMessage(){
+        setMessage(this.reader.readMessage());
+    }
+    
+    public final void sendMessage(){
+        this.sender.sendMessage(getMessageString());
+    }
+    
+    public final void setReader(MessageReader reader){
         this.reader = reader;
-        this.writer = writer;
-        setMessage(reader.readMessage()); 
-        writer.writeMessage(getMessageString());
+    }
+    
+    public final void setOutput(MessageOutput sender){
+        this.sender = sender;
     }
     
     private void setMessage(String message){
