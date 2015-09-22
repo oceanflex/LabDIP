@@ -12,12 +12,12 @@ package dip.lab3.student.solution1;
 public class StaticMessageReader implements MessageReader{
     private String message;
     
-    public StaticMessageReader(){
-        this.message = "Hello!";
-    }
-    public StaticMessageReader(String message){
-        this.message = message;
-    }
+//    public StaticMessageReader(){
+//        this.message = "Hello!";
+//    }
+//    public StaticMessageReader(String message){
+//        this.message = message;
+//    }
     
     
     @Override

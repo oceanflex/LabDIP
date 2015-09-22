@@ -14,10 +14,12 @@ public class Startup {
         MessageReader stable = new StaticMessageReader();
         MessageOutput console = new ConsoleMessageOutput();
         MessageReader keyboard = new KeyboardMessageReader();
+        MessageReader hello = new HelloStaticMessage();
         MessageOutput gui = new JOptionPaneMessageOutput();
         MessagingService message = new MessagingService(stable, console);
         message.setReader(keyboard);
         message.setOutput(gui);
         message.serveMessage();
+        message.sendReaderUpdate(hello);
     }
 }
