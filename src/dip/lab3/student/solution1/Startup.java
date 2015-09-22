@@ -17,9 +17,7 @@ public class Startup {
         MessageOutput gui = new JOptionPaneMessageOutput();
         MessagingService message = new MessagingService(stable, console);
         message.setReader(keyboard);
-        message.readMessage();
-        message.sendMessage();
         message.setOutput(gui);
-        message.sendMessage();
+        message.serveMessage();
     }
 }

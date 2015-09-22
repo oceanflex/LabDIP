@@ -18,8 +18,22 @@ public class MessagingService {
     public MessagingService(MessageReader reader, MessageOutput sender){
         setReader(reader);
         setOutput(sender);
-        readMessage(); 
+        serveMessage();
+    }
+    
+    public final void serveMessage(){
+        readMessage();
         sendMessage();
+    }
+    
+    public final void sendOutputUpdate(MessageOutput sender){
+        setOutput(sender);
+        sendMessage();
+    }
+    
+    public final void sendReaderUpdate(MessageReader reader){
+        setReader(reader);
+        serveMessage();
     }
     
     public final void readMessage(){
