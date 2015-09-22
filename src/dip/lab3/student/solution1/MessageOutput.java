@@ -5,16 +5,10 @@
  */
 package dip.lab3.student.solution1;
 
-import javax.swing.JOptionPane;
 /**
  *
  * @author Zachary
  */
-public class JOptionPaneMessageWriter implements MessageWriter{
-
-    @Override
-    public void writeMessage(String write) {
-        JOptionPane.showMessageDialog(null,write);
-    }
-    
+public interface MessageOutput {
+    public abstract void writeMessage(String write);
 }

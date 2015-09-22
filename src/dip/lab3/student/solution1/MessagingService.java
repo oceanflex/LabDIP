@@ -12,10 +12,10 @@ package dip.lab3.student.solution1;
 public class MessagingService {
     private String message;
     private MessageReader reader;
-    private MessageWriter writer;
+    private MessageOutput writer;
     
     
-    public MessagingService(MessageReader reader, MessageWriter writer){
+    public MessagingService(MessageReader reader, MessageOutput writer){
         this.reader = reader;
         this.writer = writer;
         setMessage(reader.readMessage()); 

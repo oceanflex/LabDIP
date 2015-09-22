@@ -12,7 +12,7 @@ package dip.lab3.student.solution1;
 public class Startup {
     public static void main(String[] args) {
         MessageReader reader = new StaticMessageReader();
-        MessageWriter writer = new ConsoleMessageWriter();
+        MessageOutput writer = new ConsoleMessageOutput();
         MessagingService message = new MessagingService(reader, writer);
     }
 }
