@@ -11,6 +11,8 @@ package dip.lab3.student.solution1;
  */
 public class Startup {
     public static void main(String[] args) {
-        
+        MessageReader reader = new StaticMessageReader();
+        MessageWriter writer = new ConsoleMessageWriter();
+        MessagingService message = new MessagingService(reader, writer);
     }
 }
